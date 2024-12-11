@@ -12,7 +12,7 @@ static int nbm_lenght(long int nb)
 	return b;
 }
 
-void ft_put_unsnbr(va_list args)
+int ft_put_unsnbr(va_list args, int len)
 {
 	unsigned int nb;
 	long int i;
@@ -31,7 +31,8 @@ void ft_put_unsnbr(va_list args)
 		if (a>=10)
 			a = a%10;
 		ch = a + '0';
-		write(1, &ch, 1);
+		len = len + ft_putchar(ch);
 		b--;
 	}
+	return(len);
 }

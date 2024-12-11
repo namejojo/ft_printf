@@ -40,7 +40,7 @@ static long int comp(char *base, long int size)
 	return(1);
 }
 
-void ft_putnbr_baseUP(va_list args)
+int ft_putnbr_baseUP(va_list args, int len)
 {
 	char str[50];
 	long int ind;
@@ -61,6 +61,9 @@ void ft_putnbr_baseUP(va_list args)
 		}
 		str[ind] = '\0';
 		while (ind >= 0)
-			write(1, &str[ind--], 1);
+		{
+			len = len + ft_putchar(str[ind--]);
+		}
 	}
+	return(len);
 }

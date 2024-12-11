@@ -1,23 +1,24 @@
 #include "libftprintf.h"
 
-void ft_check(char* str, va_list args)
+int ft_check(char* str, va_list args, int len)
 {
 	if(*str && *str == 'c')
-		ft_putchar(args);
+		len = len + ft_putchar(va_arg(args, int));
 	else if(*str && *str == 's')
-		ft_putstr(args);
+		len = ft_putstr(args, len);
 	else if(*str && *str == 'p')
-		ft_putptr(args);
+		len = ft_putptr(args, len);
 	else if(*str && *str == 'd')
-		ft_putnbr(args);
+		len = ft_putnbr(args, len);
 	else if(*str && *str == 'i')
-		ft_putnbr(args);
+		len = ft_putnbr(args, len);
 	else if(*str && *str == 'u')
-		ft_put_unsnbr(args);
+		len = ft_put_unsnbr(args, len);
 	else if(*str && *str == 'X')
-		ft_putnbr_baseUP(args);
+		len = ft_putnbr_baseUP(args, len);
 	else if(*str && *str == 'x')
-		ft_putnbr_baseDOWN(args);
+		len = ft_putnbr_baseDOWN(args, len);
 	else if(*str && *str == '%')
-		write(1,"%%", 1);
+		len = len + write(1,"%%", 1);
+	return(len);
 }
