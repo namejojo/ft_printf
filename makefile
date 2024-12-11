@@ -6,6 +6,7 @@ SRC_FILES = ft_printf.c\
 			ft_put_unsnbr.c\
 			ft_putnbr_baseDOWN.c\
 			ft_putptr.c\
+			ft_check_error.c\
 			ft_check.c
 		
 OBJ_FILES = ${SRC_FILES:.c=.o}

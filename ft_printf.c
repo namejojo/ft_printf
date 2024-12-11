@@ -6,15 +6,18 @@ int ft_printf(const char *str, ...)
 	char *output;
 	int len;
 
-	len = 0;	
-	output = (char*)str;
+	len = 0;
 	va_start(args, str);
-	while(*output)
+	output = (char*)str;
+	while(*output != '\0')
 	{
-		if(*output != '%')
+		if(*output == '%' && *(output + 1) == '\0')
 		{
-			len = len + ft_putchar(*output);
+			write(1, "\0", 1);
+			output++;
 		}
+		else if(*output != '%')
+			len = len + ft_putchar(*output);
 		else
 		{
 			len = ft_check(output + 1, args, len);

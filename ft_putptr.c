@@ -48,11 +48,16 @@ int ft_putptr(va_list args, int len)
 	unsigned int nbr;
 	char *base;
 	
-	write(1, "0x",2);
 	base = "0123456789abcdef";
 	nbr = va_arg(args, int);
+	if(nbr == 0)
+	{
+		write(1, "(nil)",5);
+		return(len + 5);
+	}
 	bas = ft_strlen(base);
 	ind = 0;
+	write(1, "0x",2);
 	if(comp(base, ft_strlen(base)) == 1)
 	{
 		while(nbr != 0)

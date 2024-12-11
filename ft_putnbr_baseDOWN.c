@@ -50,11 +50,16 @@ int ft_putnbr_baseDOWN(va_list args, int len)
 	
 	base = "0123456789abcdef";
 	nbr = va_arg(args, int);
+	if(nbr == 0)
+	{
+		write(1,"0",1);
+		return(len + 1);
+	}
 	bas = ft_strlen(base);
 	ind = 0;
 	if(comp(base, ft_strlen(base)) == 1)
 	{
-		while(nbr != 0)
+		while(nbr > 0)
 		{	
 			str[ind++] = base[nbr % bas];
 			nbr = nbr / bas;

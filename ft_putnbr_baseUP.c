@@ -50,6 +50,11 @@ int ft_putnbr_baseUP(va_list args, int len)
 	
 	base = "0123456789ABCDEF";
 	nbr = va_arg(args, int);
+	if(nbr == 0)
+	{
+		write(1,"0",1);
+		return(len + 1);
+	}
 	bas = ft_strlen(base);
 	ind = 0;
 	if(comp(base, ft_strlen(base)) == 1)
