@@ -1,32 +1,29 @@
 SRC_FILES = ft_printf.c\
-			ft_putnbr_baseUP.c\
 			ft_putchar.c\
 			ft_putnbr.c\
 			ft_putstr.c\
 			ft_put_unsnbr.c\
-			ft_putnbr_baseDOWN.c\
-			ft_putptr.c\
-			ft_check_error.c\
+			ft_itoa_base.c\
 			ft_check.c
 		
 OBJ_FILES = ${SRC_FILES:.c=.o}
 
 NAME = libftprintf.a
 
-CC = gcc
+CC = cc
 
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
-.c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+all: ${NAME}
 
 ${NAME}: ${OBJ_FILES}
-	ar rcs $@ $^
+	ar rcs $@ $?
 
-all: ${NAME} 
+%.o: %.c
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 clean: 
-	rm -f *.o bonus
+	rm -f *.o
 
 fclean: clean 
 	rm -f ${NAME}
