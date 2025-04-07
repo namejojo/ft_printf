@@ -1,7 +1,7 @@
 #include "libftprintf.h"
 
 int ft_put_unsnbr(unsigned int nb)
-{
+{a
 	int len;
 
 	len = 1;
