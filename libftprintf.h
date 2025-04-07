@@ -6,7 +6,7 @@
 /*   By: jlima-so <jlima-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 11:55:37 by jlima-so          #+#    #+#             */
-/*   Updated: 2025/04/05 12:01:26 by jlima-so         ###   ########.fr       */
+/*   Updated: 2025/04/07 09:10:04 by jlima-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ int	ft_putstr(char *str);
 int	ft_put_unsnbr(unsigned int nb);
 int	ft_itoa_base(int nbr, char *base);
 int	ft_printf(const char *str, ...);
+int	ft_putn_base(int nbr, char *base);
+
 
 #endif

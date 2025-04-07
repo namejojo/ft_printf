@@ -1,19 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putn_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlima-so <jlima-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/05 12:03:00 by jlima-so          #+#    #+#             */
-/*   Updated: 2025/04/07 09:00:53 by jlima-so         ###   ########.fr       */
+/*   Created: 2025/04/07 08:39:55 by jlima-so          #+#    #+#             */
+/*   Updated: 2025/04/07 09:17:15 by jlima-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putchar(char c)
+static int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
-	return (1);
+	long int	ind;
+
+	ind = 0;
+	while (str[ind])
+		ind++;
+	return (ind);
+}
+
+int	ft_putn_base(int nbr, char *base)
+{
+	int	base_len;
+	int	len;
+
+	base_len = ft_strlen(base);
+	len = 1;
+	if (nbr >= base_len)
+		len += ft_putn_base(nbr / base_len, base);
+	nbr = nbr % base_len;
+	write (1, &base[nbr], 1);
+	return (len);
 }

@@ -6,7 +6,7 @@
 /*   By: jlima-so <jlima-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 10:31:48 by jlima-so          #+#    #+#             */
-/*   Updated: 2025/04/05 12:08:43 by jlima-so         ###   ########.fr       */
+/*   Updated: 2025/04/07 09:00:55 by jlima-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_printf(const char *str, ...)
 		if (*output != '%')
 			len = len + ft_putchar(*output);
 		else if (*output++ == '%')
-			len = ft_check(output, args);
+			len = ft_check(*output, args);
 		output++;
 	}
 	va_end (args);

@@ -1,21 +1,10 @@
 #include "libftprintf.h"
+#include <stdio.h>
 
-int ft_put_unsnbr(unsigned int nb)
-{a
-	int len;
-
-	len = 1;
-	if (nb >= 10)
-		len += ft_put_unsnbr(nb / 10);
-	nb = (nb % 10) + '0';
-	write (1, &nb, 1);
-	return (len);
-}
-
-int main (void)
+int main(void)
 {
 	int i;
 
-	i = printf("%x",-100);
-	printf("\nwe printd, %d bytes", 10);
+	i = ft_putn_base(15,"0123456789ABCDEF");
+	printf("\nwe printd, %d bytes\n", i);
 }

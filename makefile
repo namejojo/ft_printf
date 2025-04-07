@@ -3,8 +3,8 @@ SRC_FILES = ft_printf.c\
 			ft_putnbr.c\
 			ft_putstr.c\
 			ft_put_unsnbr.c\
-			ft_itoa_base.c\
-			ft_check.c
+			ft_check.c\
+			ft_putn_base.c
 		
 OBJ_FILES = ${SRC_FILES:.c=.o}
 
