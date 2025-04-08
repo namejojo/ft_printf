@@ -6,11 +6,11 @@
 /*   By: jlima-so <jlima-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 12:02:50 by jlima-so          #+#    #+#             */
-/*   Updated: 2025/04/07 09:00:50 by jlima-so         ###   ########.fr       */
+/*   Updated: 2025/04/08 18:33:11 by jlima-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr(int nb)
 {
@@ -18,7 +18,7 @@ int	ft_putnbr(int nb)
 
 	len = 1;
 	if (-10 < nb && nb < 0)
-		write (1, "-", 1);
+		len += write (1, "-", 1);
 	if (nb <= -10 || nb >= 10)
 		len += ft_putnbr(nb / 10);
 	if (nb < 0)

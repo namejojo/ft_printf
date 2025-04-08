@@ -6,15 +6,15 @@
 /*   By: jlima-so <jlima-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 08:39:55 by jlima-so          #+#    #+#             */
-/*   Updated: 2025/04/07 09:17:15 by jlima-so         ###   ########.fr       */
+/*   Updated: 2025/04/08 20:20:59 by jlima-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static int	ft_strlen(char *str)
 {
-	long int	ind;
+	int	ind;
 
 	ind = 0;
 	while (str[ind])
@@ -22,10 +22,10 @@ static int	ft_strlen(char *str)
 	return (ind);
 }
 
-int	ft_putn_base(int nbr, char *base)
+int	ft_putn_base(unsigned int nbr, char *base)
 {
-	int	base_len;
-	int	len;
+	unsigned int	base_len;
+	int				len;
 
 	base_len = ft_strlen(base);
 	len = 1;

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlima-so <jlima-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 11:55:37 by jlima-so          #+#    #+#             */
-/*   Updated: 2025/04/07 09:10:04 by jlima-so         ###   ########.fr       */
+/*   Updated: 2025/04/08 20:21:23 by jlima-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <unistd.h>
@@ -23,7 +23,7 @@ int	ft_putstr(char *str);
 int	ft_put_unsnbr(unsigned int nb);
 int	ft_itoa_base(int nbr, char *base);
 int	ft_printf(const char *str, ...);
-int	ft_putn_base(int nbr, char *base);
-
+int	ft_putptr(unsigned long int nbr, char *base);
+int	ft_putn_base(unsigned int nbr, char *base);
 
 #endif

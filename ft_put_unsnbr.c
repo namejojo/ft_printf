@@ -6,11 +6,11 @@
 /*   By: jlima-so <jlima-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 12:02:11 by jlima-so          #+#    #+#             */
-/*   Updated: 2025/04/07 09:00:53 by jlima-so         ###   ########.fr       */
+/*   Updated: 2025/04/08 18:33:03 by jlima-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_put_unsnbr(unsigned int nb)
 {
