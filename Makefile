@@ -21,7 +21,7 @@ all: ${NAME}
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 clean: 
-	rm -f *.o
+	rm -f ${OBJ_FILES}
 
 fclean: clean 
 	rm -f ${NAME}

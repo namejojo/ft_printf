@@ -1,15 +1,15 @@
-// #include "ft_printf.h"
-// #include <stdio.h>
-// #include <limits.h>
-
-// // #define UINT_MAX 2147483647
-
-// int main(void)
-// {
-// 	int i;
-// 	//    printf("%p %p\n\n",-9223372036854775808, 9223372036854775807);
-// 	ft_printf("%p", LONG_MIN);
-// }
+#include "ft_printf.h"
+#include <stdio.h>
+#include <limits.h>
+// #define UINT_MAX 2147483647
+#define ola -9223372036854775808
+int main(void)
+{
+	int i;
+	//    printf("%p %p\n\n",-9223372036854775808, 9223372036854775807);
+	ft_printf("%p\n\n", LONG_MIN);
+	ft_printf("%p", -9223372036854775808);
+}
 // 
 // 
 // 
