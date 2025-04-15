@@ -1,16 +1,36 @@
 #include "ft_printf.h"
 #include <stdio.h>
-#include <limits.h>
 // #define UINT_MAX 2147483647
-#define ola -9223372036854775808
+
 int main(void)
 {
-	int i;
-	//    printf("%p %p\n\n",-9223372036854775808, 9223372036854775807);
-	ft_printf("%p\n\n", LONG_MIN);
-	ft_printf("%p", -9223372036854775808);
+
+	char *a = "ola bom dia %s % s % p %% % i % i % X %u\0";
+	// char *v = NULL;
+
+	// char *a = "% i";
+	// printf("%d", printf(a, 0));
+
+	// isto nao e um teste valido but is is fun   printf("''''%d''''\n",    printf(a, "a todos", NULL, NULL));
+	// isto nao e um teste valido but is is funft_printf("''''%d''''\n", ft_printf(a, "a todos", NULL, NULL));
+	// ft_printf("\n");
+
+	//    printf("''''%d''''\n",    printf("bom dia a % %s %s%%p", "a todos", NULL, NULL));
+	// ft_printf("''''%d''''\n", ft_printf("bom dia a % %s %s%%p", "a todos", NULL, NULL));
+	
+	// ft_printf("\n");
+
+	ft_printf("b''''%d''''\n", ft_printf(a, "b todos", NULL, NULL, 2147483647, -2147483648, -32, -12334567, -1, "ola bom dia a todos"));
+	
+	
+	write(1,"\n",1);
+
+	printf("a''''%d''''\n",    printf(a, "a todos", NULL, NULL, 2147483647, -2147483648, -32, -12334567, -1, "ola bom dia a todos"));
+
+	//    printf("''''%d''''\n",    printf(v));
+	// ft_printf("''''%d''''\n", ft_printf(v));
 }
-// 
+// clear && make && ccf main.c libftprintf.a && ./a.out
 // 
 // 
 // 

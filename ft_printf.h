@@ -6,7 +6,7 @@
 /*   By: jlima-so <jlima-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 11:55:37 by jlima-so          #+#    #+#             */
-/*   Updated: 2025/04/09 16:12:58 by jlima-so         ###   ########.fr       */
+/*   Updated: 2025/04/15 18:00:41 by jlima-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,17 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
+# include <limits.h>
+# include <stdio.h>
 # include <unistd.h>
 
-int	ft_check(char c, va_list args);
+typedef struct s_numb
+{
+	int	len;
+	int	temp;
+	int	flag;
+}			t_numb;
+
 int	ft_putchar(char c);
 int	ft_putnbr(int nb);
 int	ft_putstr(char *str);
