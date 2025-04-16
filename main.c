@@ -5,7 +5,7 @@
 int main(void)
 {
 
-	char *a = "ola bom dia %s % s % p %% % i % i % X %u\0";
+	char *a = "ola bom dia %K%s %p %% %i %i %X %u\0";
 	// char *v = NULL;
 
 	// char *a = "% i";
@@ -16,16 +16,21 @@ int main(void)
 	// ft_printf("\n");
 
 	//    printf("''''%d''''\n",    printf("bom dia a % %s %s%%p", "a todos", NULL, NULL));
-	// ft_printf("''''%d''''\n", ft_printf("bom dia a % %s %s%%p", "a todos", NULL, NULL));
-	
 	// ft_printf("\n");
+	// ft_printf("''''%d''''\n", ft_printf(a, "a todos", NULL, NULL));
+	// ft_printf("\n");
+	// printf("''''%d''''\n", printf(a, "a todos", NULL, NULL));
+	
 
-	ft_printf("b''''%d''''\n", ft_printf(a, "b todos", NULL, NULL, 2147483647, -2147483648, -32, -12334567, -1, "ola bom dia a todos"));
+
+	// printf("''''%d''''\n", printf("|%X|", 32));
 	
 	
-	write(1,"\n",1);
-
-	printf("a''''%d''''\n",    printf(a, "a todos", NULL, NULL, 2147483647, -2147483648, -32, -12334567, -1, "ola bom dia a todos"));
+	// write(1,"\n",1);
+// 
+	printf("a''''%d''''\n",      printf(a, "a todos", NULL, NULL, 2147483647, -2147483648, -32, -12334567, -1, "ola bom dia a todos"));
+	ft_printf("\n");
+	ft_printf("a''''%d''''\n",ft_printf(a, "a todos", NULL, NULL, 2147483647, -2147483648, -32, -12334567, -1, "ola bom dia a todos"));
 
 	//    printf("''''%d''''\n",    printf(v));
 	// ft_printf("''''%d''''\n", ft_printf(v));
@@ -34,8 +39,8 @@ int main(void)
 // 
 // 
 // 
-// 
-// 
+// 0. 
+// .-
 // 
 // 
 // 

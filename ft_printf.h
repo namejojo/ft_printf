@@ -6,7 +6,7 @@
 /*   By: jlima-so <jlima-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 11:55:37 by jlima-so          #+#    #+#             */
-/*   Updated: 2025/04/15 18:00:41 by jlima-so         ###   ########.fr       */
+/*   Updated: 2025/04/16 09:10:18 by jlima-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ typedef struct s_numb
 {
 	int	len;
 	int	temp;
-	int	flag;
 }			t_numb;
 
 int	ft_putchar(char c);
