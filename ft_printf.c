@@ -6,7 +6,7 @@
 /*   By: jlima-so <jlima-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 10:31:48 by jlima-so          #+#    #+#             */
-/*   Updated: 2025/04/16 09:29:01 by jlima-so         ###   ########.fr       */
+/*   Updated: 2025/04/18 17:24:41 by jlima-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ static int	ft_check(char *c, va_list args)
 		return (ft_putn_base(va_arg(args, unsigned int), "0123456789abcdef"));
 	else if (*c == '%')
 		return (ft_putchar('%'));
-	write (1, "%", 1);
-	return (write (1, c, 1) + 1);
+	return (ft_putchar('%') + ft_putchar(*c));
 }
 
 int	ft_printf(const char *str, ...)

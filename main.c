@@ -5,7 +5,7 @@
 int main(void)
 {
 
-	char *a = "ola bom dia %K%s %p %% %i %i %X %u\0";
+	char *a = "ola bom dia %K%s %p %% %s %i %X %u\0";
 	// char *v = NULL;
 
 	// char *a = "% i";
@@ -28,9 +28,9 @@ int main(void)
 	
 	// write(1,"\n",1);
 // 
-	printf("a''''%d''''\n",      printf(a, "a todos", NULL, NULL, 2147483647, -2147483648, -32, -12334567, -1, "ola bom dia a todos"));
+	printf("a''''%d''''\n",      printf(a, "a todos", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL));
 	ft_printf("\n");
-	ft_printf("a''''%d''''\n",ft_printf(a, "a todos", NULL, NULL, 2147483647, -2147483648, -32, -12334567, -1, "ola bom dia a todos"));
+	ft_printf("a''''%d''''\n",ft_printf(a, "a todos", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL));
 
 	//    printf("''''%d''''\n",    printf(v));
 	// ft_printf("''''%d''''\n", ft_printf(v));
