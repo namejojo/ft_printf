@@ -5,7 +5,7 @@
 int main(void)
 {
 
-	char *a = "ola bom dia %";
+	char *a = "ola bom dia ";
 	// char *v = NULL;
 
 	// char *a = "% i";
@@ -35,7 +35,7 @@ int main(void)
 	//    printf("''''%d''''\n",    printf(v));
 	// ft_printf("''''%d''''\n", ft_printf(v));
 
-	// fclose(stdout);
-	// fprintf(stderr, "PRINTF: %d\n", printf("teste123\n"));
-	// fprintf(stderr, "FT_PRINTF: %d\n", ft_printf("teste123\n"));
+	fclose(stdout);
+	fprintf(stderr, "PRINTF: %d\n", printf("teste123\n"));
+	fprintf(stderr, "FT_PRINTF: %d\n", ft_printf("teste123\n"));
 }
