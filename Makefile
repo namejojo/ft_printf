@@ -16,6 +16,9 @@ FLAGS = -Wall -Wextra -Werror
 
 all: ${NAME}
 
+${NAME}: ${OBJ_FILES}
+	ar rcs $@ $?
+
 %.o: %.c
 	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
@@ -28,7 +31,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: re fclean clean all
-
-
-${NAME}: ${OBJ_FILES}
-	ar rcs $@ $?
