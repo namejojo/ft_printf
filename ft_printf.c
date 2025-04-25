@@ -6,7 +6,7 @@
 /*   By: jlima-so <jlima-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 10:31:48 by jlima-so          #+#    #+#             */
-/*   Updated: 2025/04/18 17:24:41 by jlima-so         ###   ########.fr       */
+/*   Updated: 2025/04/25 15:45:28 by jlima-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_printf(const char *str, ...)
 	va_list	args;
 	t_numb	n;
 
-	if (read(1, &n.len, 0) == -1)
+	if (write(1, "", 0) == -1)
 		return (-1);
 	if (str == NULL)
 		return (-1);
